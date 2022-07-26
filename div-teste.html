@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      * {
+    box-sizing: border-box;
+}
+      .container {
+        width: 100%;
+        border: 1px solid black;
+      }
+      .svg {
+        position: absolute;
+        width: 0;
+        height: 0; 
+      }
+      .clipped {
+        width: 100%;
+        padding-bottom: 75%;
+        background: #6C63FF url(images/sky.svg);
+        background-size: cover;
+        -webkit-clip-path: url(#my-clip-path);
+        clip-path: url(#my-clip-path);
+        animation: scroll 70s linear infinite;
+      }
+
+      @keyframes scroll {
+        100%{
+          background-position:0px 3000px;
+        }
+}
+
+    </style>
+    
+    <svg class="svg">
+      <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.016020538571428572,7.479397221052633e-18 L0.09142857142857143,0 L0.09142857142857143,0.13473684210526315 L0.016020538571428572,0.13473684210526315 L0.0026930520285714287,0.08732046484210526 C-0.00089768401,0.07454538568421051 -0.00089768401,0.06019145642105263 0.0026930520285714287,0.047416377263157894 L0.016020538571428572,7.479397221052633e-18 Z"></path></clipPath>
+    </svg>
+    
+    
+    <div class="container">
+      <div class="clipped scroll"></div>
+    </div>
+    
+
+
+    
+</body>
+</html>

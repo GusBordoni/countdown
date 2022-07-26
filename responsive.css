@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+    body {
+        background: url(images/top-image.svg) no-repeat center top/100%, url(images/bottom-image.svg) no-repeat center bottom/100%;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion) {   /* The prefers-reduced-motion CSS media feature is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses. */
+    .wrapper {
+      animation: scroll 200s linear infinite;
+    }
+  }
