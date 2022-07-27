@@ -5,10 +5,13 @@
     .container {
         width: 100%;
     }
+    .exhaust-flame {
+        top: 66%;
+    }
 }
 
 @media (prefers-reduced-motion) {   /* The prefers-reduced-motion CSS media feature is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses. */
-    .wrapper {
-      animation: scroll 200s linear infinite;
+    .clipped {
+      animation: stars 200s linear infinite;
     }
   }

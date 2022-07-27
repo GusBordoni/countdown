@@ -12,8 +12,9 @@
     box-sizing: border-box;
 }
       .container {
-        width: 100%;
+        width: 70%;
         border: 1px solid black;
+        padding: 15px;
       }
       .svg {
         position: absolute;
@@ -22,7 +23,7 @@
       }
       .clipped {
         width: 100%;
-        padding-bottom: 75%;
+        padding-bottom: 64%;
         background: #6C63FF url(images/sky.svg);
         background-size: cover;
         -webkit-clip-path: url(#my-clip-path);
@@ -38,14 +39,15 @@
 
     </style>
     
-    <svg class="svg">
-      <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox"><path d="M0.016020538571428572,7.479397221052633e-18 L0.09142857142857143,0 L0.09142857142857143,0.13473684210526315 L0.016020538571428572,0.13473684210526315 L0.0026930520285714287,0.08732046484210526 C-0.00089768401,0.07454538568421051 -0.00089768401,0.06019145642105263 0.0026930520285714287,0.047416377263157894 L0.016020538571428572,7.479397221052633e-18 Z"></path></clipPath>
-    </svg>
+<svg class="svg">
+  <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox" transform="scale(0.00144, 0.00218)"><path d="M611.1 383.04c-67.1 5.96-147-4.928-216.3 38.08-95.9 59.136-266.874 36.911-322.8-2.12C14 380-11.2 328.832 4.9 280.448c9.8-28.672 29.4-51.072 53.9-63.168 21-10.304 51.8-32.256 65.8-73.92a177.1 176.96 0 0123.8-47.488C175.7 56 231.7-.448 329.7 0a157.5 156.8 0 0150.4 8.512c35.7 12.096 67.9 36.736 92.4 70.784 15.4 21.952 39.2 42.112 72.8 43.456 46.9 2.24 91 23.744 124.6 62.272C716 238 690.2 375.872 611.1 383.04"></path></clipPath>
+</svg>
     
     
     <div class="container">
       <div class="clipped scroll"></div>
     </div>
+    
     
 
 

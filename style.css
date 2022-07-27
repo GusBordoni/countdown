@@ -30,17 +30,82 @@ body {
 }
 
 .rocket-container {
-  height: auto;
-  background: var(--purple) url(images/sky.svg) center center;
-  height: 450px;
-  position: absolute;
-  left: 2%;
+  width: 50%;
+  padding: 15px;
+  display: block;
+  align-self: center;
   z-index: -1;
-  top: 25%;
+  position: absolute;
+  left: 48%;
 }
 
-.clip-me {
-  clip-path: path('M529.91,332.44a74.8,74.8,0,0,1-14.81-.2c-54.07-6-127.7-4.27-187.72,32.89-83,51.38-213.1,7.39-270.49-16.54C13.05,330.31-9.72,285.55,4,243.53c.19-.59.39-1.19.59-1.78,8.61-25,25.59-44.51,46.62-54.87,18.33-9,45.09-27.89,57-64.11a153.55,153.55,0,0,1,20.43-41.3C152.07,48.62,201.2-.3,285.7,0a136.33,136.33,0,0,1,43.53,7.36c30.87,10.51,58.75,31.88,80,61.5,13.56,18.89,33.89,36.45,63,37.88,40.39,2,78.94,20.79,107.86,54.23.83,1,1.65,1.92,2.48,2.9C634.07,225.16,598.3,326.47,529.91,332.44Z');
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0; 
+}
+
+.clipped {
+  width: 100%;
+  padding-bottom: 64%;
+  background: #6C63FF url(images/sky.svg);
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
+  animation: stars 70s linear infinite;
+}
+
+@keyframes stars {
+  100% {background-position: 0 -6000%;}
+}
+
+.rocket-svg {
+  position: absolute;
+  z-index: 2;
+  width: 25%;
+  left: 35%;
+  top: -12%;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {transform: translate3d(0px, 0px, 0);}
+  50% {transform: translate3d(0px, -10px, 0);}
+  100% {transform: translate3d(0px, 0px, 0);}
+}
+
+.exhaust-flame {
+  position: absolute;
+  width: 1.9%;
+  background: linear-gradient(to bottom, rgba(180,58,58,1) 0%, rgba(252,176,69,0.85) 55%, rgba(255,196,0,0) 90%);
+  height: 18%;
+  animation: exhaust 0.25s infinite, bounce 2s infinite;
+  z-index: 1;
+  top: 68%;
+}
+
+.pos1 {
+  left: 37.5%;
+  height: 12%;
+}
+
+.pos2 {
+  left: 44.5%;
+}
+
+.pos3 {
+  left: 48.85%;
+}
+
+.pos4 {
+  left: 56%;
+  height: 12%;
+}
+
+@keyframes exhaust {
+  0% {background: linear-gradient(to bottom, rgba(180,58,58,1) 2%, rgba(252,176,69,0.75) 57%, rgba(255,196,0,0) 92%);}
+  50% {background: linear-gradient(to bottom, rgba(180,58,58,1) 5%, rgba(252,176,69,0.85) 60%, rgba(255,196,0,0) 100%);}
+  75% {background: linear-gradient(to bottom, rgba(180,58,58,1) 2%, rgba(252,176,69,0.75) 57%, rgba(255,196,0,0) 92%);}
 }
 
 h1 {
