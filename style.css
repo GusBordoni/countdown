@@ -115,6 +115,13 @@ h1 {
   letter-spacing: 5px;
 }
 
+#ready {
+  font-size: 4em;
+  font-weight: 500;
+  color: var(--black);
+  display: none;
+}
+
 .countdown {
   display: flex;
   width: 80%;
@@ -129,6 +136,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 5%;
 }
 
 .countdown > div:nth-child(even) {
