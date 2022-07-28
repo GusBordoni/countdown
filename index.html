@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="countdown-container">
-        <h1>READY TO LAUNCH IN...</h1>
+        <h1 id="launch-warning">READY TO LAUNCH IN...</h1>
         <div class="countdown" id="countdown">
             <div>
                 <span>dias</span>
@@ -37,7 +37,7 @@
         </div>
         <h1 id="ready">LIFT OFF!</h1>
         <span class="signup-intro">Inscreva-se para saber mais sobre o lançamento</span>
-        <button>Inscreva-se</button>
+        <button id="signup-button">Inscreva-se</button>
     </div>
     <div class="rocket-container">
         <img src="images/rocket.svg" alt="" class="rocket-svg">
@@ -52,6 +52,33 @@
 <svg class="svg">
     <clipPath id="my-clip-path" clipPathUnits="objectBoundingBox" transform="scale(0.00144, 0.00218)"><path d="M611.1 383.04c-67.1 5.96-147-4.928-216.3 38.08-95.9 59.136-266.874 36.911-322.8-2.12C14 380-11.2 328.832 4.9 280.448c9.8-28.672 29.4-51.072 53.9-63.168 21-10.304 51.8-32.256 65.8-73.92a177.1 176.96 0 0123.8-47.488C175.7 56 231.7-.448 329.7 0a157.5 156.8 0 0150.4 8.512c35.7 12.096 67.9 36.736 92.4 70.784 15.4 21.952 39.2 42.112 72.8 43.456 46.9 2.24 91 23.744 124.6 62.272C716 238 690.2 375.872 611.1 383.04"></path></clipPath>
 </svg>
+
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal-header">
+        <h1 class="modal-header-title">A gente te avisa quando for a hora!</h1>
+        <div id="close-button">
+            X
+        </div>
+        </div> 
+        <div class="modal-form">
+        <form action="" method="" id="login-form">
+                    <fieldset>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" autocomplete="on" placeholder="Digite seu nome" required autofocus>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" autocomplete="on" placeholder="Digite seu e-mail" required autofocus>
+                    </fieldset>
+                </form>
+        </div>
+        <div class="modal-footer">
+        <button type="submit" form="login-form" id="submit-button">ENVIAR</button>
+        </div> 
+    </div>
+    <div class="modal-backdrop">
+    </div>
+
+
 <script src="countdown.js"></script>
 </body>
 </html>

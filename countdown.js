@@ -1,4 +1,4 @@
-var finalDate = new Date("Jul 27, 2022 17:00:00").getTime();
+var finalDate = new Date("Jul 28, 2022 17:00:00").getTime();
 var countdownClock = document.getElementById('countdown');
 
 var x = setInterval(function() {
@@ -27,7 +27,7 @@ var x = setInterval(function() {
     
     animation.onfinish = function() {
       countdownClock.style.display = 'none';
-      document.getElementsByTagName('h1')[0].innerText = 'IT IS TIME!';
+      document.getElementById('launch-warning')[0].innerText = 'IT IS TIME!';
       document.getElementById('ready').style.display = 'block';
     }
   } else {
