@@ -1,6 +1,11 @@
-var finalDate = new Date("Jul 28, 2022 17:00:00").getTime();
+var finalDate = new Date("Jul 29, 2022 17:00:00").getTime();
 var countdownClock = document.getElementById('countdown');
+var signup = document.getElementById('signup-button');
+var submitModal = document.getElementById('submit-button');
+var backdropModal = document.getElementById('modal-backdrop');
+var modalWindow = document.getElementById('modal-window');
 
+// COUNTDOWN
 var x = setInterval(function() {
 
   // Get today's date and time
@@ -27,7 +32,7 @@ var x = setInterval(function() {
     
     animation.onfinish = function() {
       countdownClock.style.display = 'none';
-      document.getElementById('launch-warning')[0].innerText = 'IT IS TIME!';
+      document.getElementById('launch-warning').innerText = 'IT IS TIME!';
       document.getElementById('ready').style.display = 'block';
     }
   } else {
@@ -38,3 +43,17 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+//MODAL
+
+signup.addEventListener('click', () => {
+  modalWindow.classList.add('show');
+  backdropModal.style.display = 'block';
+
+})
+
+document.addEventListener('click', function(event) {
+  if (event.target.matches('#close-button') || event.target.matches('#modal-backdrop') || event.target.matches('.close-bars1') || event.target.matches('.close-bars2')) {
+    modalWindow.classList.remove('show');
+    backdropModal.style.display = 'none';
+  }
+})

@@ -1,12 +1,47 @@
+@media only screen and (max-width: 1024px) {
+    .countdown > div {
+        width: 10%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     body {
         background: url(images/top-image.svg) no-repeat center top/100%, url(images/bottom-image.svg) no-repeat center bottom/100%;
     }
-    .container {
+    .countdown-container {
         width: 100%;
+        justify-content: start;
+        margin-top: 5%;
+    }
+    .rocket-container {
+        width: 78%;
+        left: 12.5%;
+        bottom: 0;
     }
     .exhaust-flame {
         top: 66%;
+    }
+    .modal {
+        width: 95%;
+        height: auto;
+        left: 2.5%;
+        top: 25%;
+    }
+    #launch-warning, .signup-intro {
+        text-align: center;
+        padding-left: unset;
+    }
+    .countdown {
+        gap: 20px;
+    }
+    .countdown > div {
+        width: 6%;
+    }
+    .countdown > div > span:nth-child(odd) {
+        font-size: .75em;
+    }
+    .countdown > div > span:nth-child(even), .countdown > div:nth-child(even) {
+        font-size: 3em;
     }
 }
 
