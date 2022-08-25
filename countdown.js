@@ -1,4 +1,4 @@
-var finalDate = new Date("Jul 29, 2022 17:00:00").getTime();
+var finalDate = new Date("Sep 27, 2022 00:00:00").getTime();
 var countdownClock = document.getElementById('countdown');
 var signup = document.getElementById('signup-button');
 var submitModal = document.getElementById('submit-button');
